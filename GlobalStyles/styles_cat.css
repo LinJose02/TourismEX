@@ -1,0 +1,158 @@
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total de los elementos */
+}
+.header {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical centrada */
+    padding: 10px 20px; /* Espaciado interno */
+}
+.header .logo {
+    display: flex;
+    align-items: center; /* Alineación vertical centrada */
+}
+.header .logo i {
+    font-size: 24px; /* Tamaño del ícono */
+    margin-right: 10px; /* Espacio a la derecha del ícono */
+}
+.header .nav {
+    display: flex;
+    align-items: center; /* Alineación vertical centrada */
+}
+.header .nav button {
+    background-color: #444; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0 5px; /* Margen horizontal */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 5px; /* Bordes redondeados */
+}
+.header .nav input {
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+}
+.hero {
+    position: relative; /* Posicionamiento relativo */
+    text-align: left; /* Texto alineado a la izquierda */
+    color: white; /* Texto blanco */
+    margin: 20px; /* Margen externo */
+}
+.hero img {
+    width: 100%; /* Ancho completo */
+    height: 500px; /* Altura aumentada en un 50% */
+    object-fit: cover; /* Imagen cubre el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+.hero .text {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 20%; /* 20% desde la parte superior */
+    left: 10%; /* 10% desde la izquierda */
+    transform: translate(-10%, -20%); /* Ajuste de posición */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+.hero .text h1 {
+    font-size: 36px; /* Tamaño de fuente grande */
+    margin: 0; /* Sin margen */
+}
+.hero .text p {
+    font-size: 18px; /* Tamaño de fuente mediano */
+}
+.content {
+    padding: 20px; /* Espaciado interno */
+}
+.content h2 {
+    font-size: 24px; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Margen inferior */
+}
+.hiking {
+    display: flex; /* Flexbox para las tarjetas de hoteles */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+.hiking-card {
+    background-color: #f5f5f5; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    width: calc(33.333% - 20px); /* Ancho de un tercio menos el espacio */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    cursor: pointer; /* Cursor de puntero */
+}
+.hiking-card img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+}
+.hiking-card .info {
+    padding: 10px; /* Espaciado interno */
+}
+.hiking-card .info h3 {
+    font-size: 18px; /* Tamaño de fuente mediano */
+    margin: 0; /* Sin margen */
+}
+.hiking-card .info p {
+    font-size: 14px; /* Tamaño de fuente pequeño */
+    color: #666; /* Color de texto gris */
+}
+.hiking-card .info .price {
+    font-size: 16px; /* Tamaño de fuente mediano */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 10px; /* Margen superior */
+}
+.load-more {
+    text-align: center; /* Texto centrado */
+    margin: 20px 0; /* Margen vertical */
+}
+.load-more button {
+    background-color: #444; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 5px; /* Bordes redondeados */
+}
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Flexbox para el pie de página */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical centrada */
+}
+.footer .about,
+.footer .contact,
+.footer .follow {
+    width: 30%; /* Ancho del 30% */
+}
+.footer .follow i {
+    margin-right: 10px; /* Margen a la derecha */
+    cursor: pointer; /* Cursor de puntero */
+}
+@media (max-width: 768px) {
+    .hotel-card {
+        width: calc(50% - 20px); /* Ancho del 50% menos el espacio */
+    }
+}
+@media (max-width: 480px) {
+    .hotel-card {
+        width: 100%; /* Ancho completo */
+    }
+    .footer {
+        flex-direction: column; /* Dirección de columna */
+        text-align: center; /* Texto centrado */
+    }
+    .footer .about,
+    .footer .contact,
+    .footer .follow {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+}

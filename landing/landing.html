@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista -->
+    <title>TourismEx</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Enlace a Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Enlace a Google Fonts -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos -->
+    <link rel="icon" href="../../favicon_io/favicon-32x32.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>TourismEx</h1> <!-- Título del sitio -->
+        <nav>
+            <!-- Enlaces de navegación -->
+            <a class="nav-link active" href="../welcome.html" onclick="setActive(this)">Pacho</a>
+            <a class="nav-link" href="../welcome.html" onclick="setActive(this)">Villagómez</a>
+            <a class="nav-link" href="../welcome.html" onclick="setActive(this)">Supatá</a>
+        </nav>
+        <a class="discover-btn" href="../location.html">Discover</a> <!-- Botón de descubrimiento -->
+    </header>
+    <section class="hero">
+        <img src="../img/landmain.jpg" alt="Scenic view of Pacho with historical buildings and trees"> <!-- Imagen destacada -->
+        <div class="hero-text">
+            <h2>¡Bienvenidos a Pacho!</h2> <!-- Título de bienvenida -->
+            <p>¡Descubre los secretos y maravillas de esta ciudad vibrante y llena de historia! Ven y explora cada rincón, vive nuevas experiencias y crea recuerdos inolvidables!</p> <!-- Descripción de bienvenida -->
+        </div>
+    </section>
+    <section class="categories">
+        <!-- Categorías de exploración -->
+        <div class="category" onclick="location.href='../destin.html'">
+            <h3>Discover</h3>
+            <p>Establecimientos comerciales</p>
+        </div>
+        <div class="category" onclick="location.href='../destin.html'">
+            <h3>Visit</h3>
+            <p>Puntos de interés</p>
+        </div>
+        <div class="category" onclick="location.href='../destin.html'">
+            <h3>Relax</h3>
+            <p>Diversión al aire libre</p>
+        </div>
+        <div class="category" onclick="location.href='../destin.html'">
+            <h3>Explore</h3>
+            <p>Naturaleza</p>
+        </div>
+    </section>
+    <section class="featured-locations">
+        <h2>Lugares destacados</h2> <!-- Título de ubicaciones destacadas -->
+        <div class="locations">
+            <!-- Ubicaciones destacadas -->
+            <div class="location" onclick="location.href='../Culturales/C.2.Naranja.html'">
+                <img src="../img/naranja.jpg" alt="Naranja">
+                <h3>Monumentos</h3>
+                <p>Monumento a la naranja</p>
+            </div>
+            <div class="location" onclick="location.href='../Culturales/C.6.Parroquia.html'">
+                <img src="../img/landcapilla.jpg" alt="Capilla">
+                <h3>Iglesias</h3>
+                <p>Divinidad</p>
+            </div>
+            <div class="location" onclick="location.href='../Alojamiento y comida/A.6.Lord.html'">
+                <img src="../img/cerveza.png" alt="Stadium with sports events">
+                <h3>Bares</h3>
+                <p>Cerveceria artesanal</p>
+            </div>
+            <div class="location" onclick="location.href='#'">
+                <img src="../img/virginia.jpg" alt="Waterfall with natural beauty">
+                <h3>Cascadas</h3>
+                <p>Belleza natural</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <a href="../contact.html"></a>
+        <div class="about" >
+            <h3>About Us</h3> <!-- Título sobre nosotros -->
+            <p>“Bienvenidos a Tourism Explorer Pacho, tu guía para descubrir Pacho. Ofrecemos información detallada sobre los mejores lugares, actividades y consejos prácticos para que disfrutes al máximo de este hermoso pueblo.”</p> <!-- Descripción sobre nosotros -->
+        </div>
+        <div class="contact">
+            
+            <h3>Contact</h3> <!-- Título de contacto -->
+            <p>Email: contact@tourismexplorer.com</p> <!-- Información de contacto -->
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+        <div class="follow">
+            <h3>Follow Us</h3> <!-- Título de síguenos -->
+            <div class="social-icons">
+                <!-- Íconos de redes sociales -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>Contactanos</h3> <!-- Título de síguenos -->
+            <div class="button-contact">
+                <!-- Íconos de redes sociales -->
+                <a class="contact-btn" href="../contact.html">Contactanos/About Us</a> <!-- Botón de descubrimiento -->
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

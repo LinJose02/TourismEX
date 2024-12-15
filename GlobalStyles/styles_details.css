@@ -1,0 +1,151 @@
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total de los elementos */
+}
+header {
+    display: flex; /* Flexbox para el encabezado */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical centrada */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+header h1 {
+    font-size: 24px; /* Tamaño de fuente grande */
+    margin: 0; /* Sin margen */
+}
+header nav a {
+    margin-left: 20px; /* Margen a la izquierda */
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Color del texto negro */
+}
+.container {
+    padding: 20px; /* Espaciado interno */
+}
+.main-image img {
+    width: 100%; /* Ancho completo */
+    height: 500px; /* Ajuste automático de altura */
+    object-fit: cover; /* Imagen cubre el contenedor */
+}
+.content {
+    display: flex; /* Flexbox para el contenido */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    margin-top: 20px; /* Margen superior */
+}
+.content .left {
+    flex: 2; /* Ocupa dos partes del espacio */
+    padding-right: 20px; /* Espaciado a la derecha */
+}
+.content .right {
+    flex: 1; /* Ocupa una parte del espacio */
+    padding-left: 20px; /* Espaciado a la izquierda */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+.content h2 {
+    font-size: 22px; /* Tamaño de fuente grande */
+    margin-top: 0; /* Sin margen superior */
+}
+.content p {
+    font-size: 16px; /* Tamaño de fuente mediano */
+    line-height: 1.5; /* Altura de línea */
+}
+.content ul {
+    list-style: none; /* Sin estilo de lista */
+    padding: 0; /* Sin padding */
+}
+.content ul li {
+    font-size: 16px; /* Tamaño de fuente mediano */
+    margin-bottom: 10px; /* Margen inferior */
+}
+.content .hours {
+    margin-top: 20px; /* Margen superior */
+}
+.content .images {
+    display: flex; /* Flexbox para las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    margin-top: 20px; /* Margen superior */
+}
+.content .images img {
+    width: 300px; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    margin-right: 10px; /* Margen a la derecha */
+    border-radius: 8px; /* Bordes redondeados */
+}
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+.contact-form button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+}
+.map img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordes redondeados */
+}
+footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+}
+footer a {
+    color: #fff; /* Texto blanco */
+    margin-left: 10px; /* Margen a la izquierda */
+    text-decoration: none; /* Sin subrayado */
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Dirección de columna */
+        align-items: flex-start; /* Alineación a la izquierda */
+    }
+    header nav {
+        display: flex; /* Flexbox para la navegación */
+        flex-direction: column; /* Dirección de columna */
+        align-items: flex-start; /* Alineación a la izquierda */
+    }
+    header nav a {
+        margin: 5px 0; /* Margen vertical */
+    }
+    .content {
+        flex-direction: column; /* Dirección de columna */
+    }
+    .content .left, .content .right {
+        padding: 0; /* Sin padding */
+    }
+    .content .right {
+        margin-top: 20px; /* Margen superior */
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+    }
+    .content h2 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+    }
+    .content p, .content ul li {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+    .content .images img {
+        width: 80px; /* Ancho más pequeño */
+        height: 80px; /* Altura más pequeña */
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+        padding: 8px; /* Espaciado interno más pequeño */
+    }
+}
