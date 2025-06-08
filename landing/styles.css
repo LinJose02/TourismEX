@@ -127,7 +127,7 @@ nav a.active {
 }
 .location img {
     width: 100%; /* Ancho completo */
-    height: auto; /* Altura automática */
+    height: 85%; /* Altura automática */
 }
 .location h3 {
     margin: 10px 0 0; /* Margen superior */
