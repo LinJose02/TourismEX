@@ -53,17 +53,43 @@ nav a.active {
     position: relative; /* Posicionamiento relativo */
     text-align: center; /* Texto centrado */
     color: white; /* Texto blanco */
+    overflow: hidden; /* Oculta desbordes */
+    border-radius: 10px; /* Bordes redondeados */
 }
+
 .hero img {
     width: 100%; /* Ancho completo */
     height: auto; /* Altura automática */
     border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Cubre el contenedor */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
 }
+
+/* NUEVO: Capa oscura difuminada */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* Capa semitransparente */
+    z-index: 2;
+}
+
+/* Texto encima del overlay */
 .hero-text {
     position: absolute; /* Posicionamiento absoluto */
-    top: 50%; /* 50% desde la parte superior */
-    left: 50%; /* 50% desde la izquierda */
-    transform: translate(-50%, -50%); /* Ajuste de posición */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Encima de la capa oscura */
+    padding: 2rem;
+}
 }
 .hero-text h2 {
     font-size: 36px; /* Tamaño de fuente grande */
