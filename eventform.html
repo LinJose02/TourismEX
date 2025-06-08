@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="stylesform.css" rel="stylesheet"/> <!-- Aquí se incluye el href para los estilos -->
+    <link rel="icon" href="../favicon_io/favicon-32x32.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-map-signs"></i> Promociona tu negocio o evento</h1>
+        <nav>
+            <a href="../TourismEX/landing/landing.html">Home</a>
+            <a href="contact.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Promote Your Business or Event</h2>
+            <form id="promotionForm">
+                <label for="name">Business or Event Name</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5"></textarea>
+                
+                <label for="email">Contact Email</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="image">Upload Image</label>
+                <input type="text" id="image" name="image">
+                
+                <div class="radio-group">
+                    <label>Promotion Type</label>
+                    <input type="radio" id="business" name="promotion_type" value="business">
+                    <label for="business">Business</label>
+                    <input type="radio" id="event" name="promotion_type" value="event">
+                    <label for="event">Event</label>
+                </div>
+                
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions.</label>
+                </div>
+                
+                <button type="submit" onclick="window.location.href='landing/landing.html'">Submit</button>
+            </form>
+        </div>
+        <div class="tips-container">
+            <h3>Tips for Effective Promotion</h3>
+            <p>Provide clear and concise information about your business or event.</p>
+            <p>Use high-quality images to attract more visitors.</p>
+            <p>Highlight unique features or offers.</p>
+            <p>Ensure contact details are accurate and up-to-date.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="contact-info">
+            <p>Contact Us</p>
+            <p>Email: contact@tourismexplorerpacho.com</p>
+            <p>Phone: +57 123 456 7890</p>
+        </div>
+        <div class="social-media">
+            <p>Follow Us</p>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('promotionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Aquí puedes agregar las acciones que deseas realizar al hacer clic en el botón de envío
+            const name = document.getElementById('name').value;
+            const description = document.getElementById('description').value;
+            const email = document.getElementById('email').value;
+            const image = document.getElementById('image').value;
+            const promotionType = document.querySelector('input[name="promotion_type"]:checked').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (terms) {
+                alert(`Name: ${name}\nDescription: ${description}\nEmail: ${email}\nImage: ${image}\nPromotion Type: ${promotionType}`);
+                // Aquí puedes agregar el código para enviar los datos a tu servidor o realizar otras acciones
+            } else {
+                alert('You must agree to the terms and conditions.');
+            }
+        });
+    </script>
+</body>
+</html>
